@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "fb3f51c4-24f6-4710-918a-d2be576e1711",
+		"name": "05-security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "9874211"
+	},
+	"item": [
+		{
+			"name": "employees",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "susan",
+						"password": "test123"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/employees"
+			},
+			"response": []
+		},
+		{
+			"name": "employees/ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "john",
+						"password": "test123"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/employees/1"
+			},
+			"response": []
+		},
+		{
+			"name": "employees/ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "mary",
+						"password": "test123"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/api/employees/2"
+			},
+			"response": []
+		},
+		{
+			"name": "employees",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "mary",
+						"password": "test123"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"firstName\": \"Erick\",\n    \"lastName\": \"Lopez\",\n    \"email\": \"erick@email.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/employees"
+			},
+			"response": []
+		},
+		{
+			"name": "employees",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "mary",
+						"password": "test123"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 10,\n    \"firstName\": \"Brandon\",\n    \"lastName\": \"Lopez\",\n    \"email\": \"Brandon@email.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/employees"
+			},
+			"response": []
+		}
+	]
+}
